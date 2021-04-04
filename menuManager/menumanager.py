@@ -5,29 +5,30 @@ class Manager:
         
     def get_name(self):
         print(f"Welcome to" + " " + self.name)
+        
+    # This function prints only the categories name
+    def print_onlycategories(self, categories):
+        for categ_name, categ_info in categories.items():
+                print('Category:',categ_name)
     
-    # This function prints all categories including their menu item and price
+    # Exercise A: This function prints all categories including their menu item and price
     def print_allcategoriesmenu(self, menu):
         formatted = json.dumps(menu, indent=4)
         print(formatted)
         
-    # Prints by specying a category
+    # Exercise D: Prints by specifying a category
     def list_bycategory(self, category, categories_list):
         for categ_name, categ_info in categories_list.items():
             if category == categ_name:
                 formatted = json.dumps(categ_info, indent=4)
                 print(formatted)
         
-    # This function prints only the categories name
-    def print_onlycategories(self, categories):
-        for categ_name, categ_info in categories.items():
-                print('Category:',categ_name)
-        
-    # This function adds an Item in any of the categories
+    # Exercise B: This function adds an Item in any of the categories
     def add_item(self, categories, category_name, item , item_price):
             for categ_name, categ_info in categories.items():
                 categories[category_name][item] = item_price
             
+    # Exercise D, E: Activating and deactivating a menu item
     def inactivate_activate(self, categories_list, item, menu):
         for categ_name, categ_info in categories_list.copy().items():
             for key, value in categ_info.items():
