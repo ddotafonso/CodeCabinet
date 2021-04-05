@@ -32,20 +32,17 @@ class Manager:
     # Exercise D, E: Activating and deactivating a menu item
     def inactivate_activate(self, menu_list, item, new_menu):
         for categ_name, categ_info in menu_list.copy().items():
-            for key, value in categ_info.items():
+            for key, value in categ_info.copy().items():
                 if item == key:
                     new_menu[categ_name][item] = value
-                    del menu_list[item]
-                    print(new_menu, menu_list)
+                    del menu_list[categ_name][item]
+                    print(menu_list)
                     
     def remove_menu_item(self, item, menu_list):
-        menu_name = 'active_menu'
-        if menu_list == menu_name:
-            print(f'You cannot remove from the active menu, only from inactive')
-        else:
-            for categ_name, categ_info in menu_list.items():
-                if item in categ_info:
-                    del menu_list[categ_name][item]
+        for categ_name, categ_info in menu_list.copy().items():
+            for key, value in categ_info.copy().items():
+                if item == key:
+                    del menu_list[item]
                     print(menu_list)
                 
                 
@@ -83,4 +80,6 @@ active_menu = {
 
 
 kfc = Manager("KFC")
-kfc.remove_menu_item('Brownie', active_menu)
+kfc.inactivate_activate(active_menu, 'Cake', inactive_menu)
+kfc.inactivate_activate(active_menu, 'Brownie', inactive_menu)
+print(inactive_menu)
