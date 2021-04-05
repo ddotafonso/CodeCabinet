@@ -42,7 +42,7 @@ class Manager:
         for categ_name, categ_info in menu_list.copy().items():
             for key, value in categ_info.copy().items():
                 if item == key:
-                    del menu_list[item]
+                    del menu_list[categ_name][item]
                     print(menu_list)
                 
                 
