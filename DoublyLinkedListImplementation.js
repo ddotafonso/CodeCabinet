@@ -61,9 +61,11 @@ class DoublyLinkedList {
         //     \        /
         //        X
         const leader = this.traverseToIndex(index - 1);
-        const holdingPosition = leader.next;
+        const follower = leader.next;
         leader.next = newNode;
-        newNode.next = holdingPosition;
+        newNode.prev = leader;
+        newNode.next = follower;
+        follower.prev = newNode;
         this.length++;
         return this.printList();
     }
