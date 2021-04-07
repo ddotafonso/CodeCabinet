@@ -13,9 +13,10 @@ class DoublyLinkedList {
         const newNode = {
             value: value,
             next: null,
-            prev: null
+            prev: null,
         };
-        newNode.prev = this.tail;
+        // The very last item, however it gets then updated in line 21 to the newNode
+        newNode.prev = this.tail
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
@@ -25,9 +26,11 @@ class DoublyLinkedList {
     prepend(value) {
         const firstNode = {
             value: value,
-            next: null
+            next: null,
+            prev: null
         };
         firstNode.next = this.head;
+        this.head.prev = firstNode;
         this.head = firstNode;
         this.length++;
         return this;
@@ -94,6 +97,6 @@ class DoublyLinkedList {
 const myLinkedList = new DoublyLinkedList(790);
 myLinkedList.append(5);
 myLinkedList.append(16);
-// myLinkedList.prepend(800);
-myLinkedList.insert(2);
-myLinkedList.printList()
+myLinkedList.prepend(800);
+// myLinkedList.insert(2);
+// myLinkedList.printList()
