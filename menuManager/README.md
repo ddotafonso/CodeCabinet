@@ -1,4 +1,4 @@
-## Simple Menu Manager Task
+## Simple Menu Manager
 The owner of a Cafe needs an application to **manage the menu offered in the establishment**. Items and the corresponding prices are grouped under 4 categories: 
 
  1. Hot Drinks  
