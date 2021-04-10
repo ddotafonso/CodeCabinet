@@ -14,12 +14,14 @@ class Stack {
     }
 
     peek() {
-        this.top = this.length - 1;
-        this.value = this.top
+        // this.top = this.length - 1;
+        // this.value = this.top
+        return this.top;
     }
 
     push(value) {
-        newNode
+        this.value = this.top
+        this.length++;
     }
     pop() {}
     isEmpty() {
