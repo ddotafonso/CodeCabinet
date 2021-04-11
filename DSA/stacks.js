@@ -39,6 +39,9 @@ class Stack {
         if (!this.top) {
             return null;
         }
+        if (this.top === this.bottom) {
+            this.bottom = null;
+        }
         // Javascript being a garbage collector language, it automatically deletes unwantedNode var since it's not being used.
         const unwantedNode = this.top;
         this.top = this.top.next;
