@@ -56,3 +56,6 @@ myStack.push('google');
 myStack.push('instagram');
 myStack.push('twitter');
 myStack.push('facebook');
+myStack.pop();
+myStack.pop();
+myStack.pop();
