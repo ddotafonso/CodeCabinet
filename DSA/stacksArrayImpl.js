@@ -1,3 +1,4 @@
+// Arrays in JavaScript already behave like stacks, so it's easier to implement
 class Stack {
     constructor() {
         this.array = [];
