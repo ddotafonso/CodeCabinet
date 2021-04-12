@@ -21,9 +21,9 @@ class Queue {
             this.first = newNode;
             this.last = newNode;
         } else {
-            this.holdingPosition = this.first;
-            this.first = newNode;
-            this.first.next = this.holdingPosition
+            // this.holdingPosition = this.first;  We could include the line 24 if we want to save the variable.
+            this.last.next = newNode;
+            this.last = newNode;
         }
         this.length++;
         return this;
@@ -32,11 +32,14 @@ class Queue {
         if (!this.first) {
             return null;
         }
-        const unwantedNode = this.first;
+        if (this.first === this.last) {
+            this.last = null;
+        }
         this.first = this.first.next;
         this.length--;
         return this;
-
     }
-    isEmpty() {}
+    isEmpty() {
+        return this.length === 0;
+    }
 }
