@@ -8,7 +8,7 @@ This folder contains some of the most used Data Structures that I have implement
 
 [BigO Explanation](https://medium.com/@mendozabridget777/big-o-notation-time-space-complexity-9bc31952052c)
 
-[AVL Trees](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html) and [Red/Black Tree](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html) for an animated visualization how they works.
+[AVL Trees](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html) and [Red/Black Tree](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html) for an animated visualization how they work.
 
 
 |                |JavaScript                          |Python                         |
