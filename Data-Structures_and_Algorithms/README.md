@@ -4,7 +4,7 @@ This folder contains some of the most used Data Structures that I have implement
 
 ## Resources used:
 
-[Visualgo](https://visualgo.net/en.), for an animated representation on how these DSA work, could be are/implemented.
+[Visualgo](https://visualgo.net/en.), for an animated representation on how these DSA work and could be implemented.
 
 [BigO Explanation](https://medium.com/@mendozabridget777/big-o-notation-time-space-complexity-9bc31952052c)
 
